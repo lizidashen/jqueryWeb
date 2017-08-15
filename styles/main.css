@@ -1,0 +1,734 @@
+@charset "utf-8";
+/* CSS Document */
+/*头部css*/
+/*头部背景 图片无限复制*/
+#header{
+	background: url(../images/headerbg.png) repeat-x scroll 0 0 #ffffff;
+	height: 105px;
+}
+/*网页头部 明确大小位置*/
+#header .contWidth{
+	position: relative;
+	height: 105px;
+	width: 990px;
+	margin: 0 auto;
+	z-index: 100;
+}
+/*logo图片 位置*/
+#header .logo{
+	float: left;
+	margin: 0 0 0 10px;
+	color: #fff;
+	line-height: 80px;
+}
+/*搜索框 位置大小*/
+#header .search{
+	left: 198px;
+	top: 20px;
+	position: absolute;
+}
+/*input文本框本身的详细参数*/
+#inputSearch {
+    border: 1px solid #BABEBF;
+    color: #999999;
+    font-size: 14px;
+    height: 17px;
+    padding: 3px 6px 5px 6px;
+    width: 200px;
+}
+/*皮肤切换块 位置大小*/
+#skin{
+	float: right;
+	margin: 10px;
+	padding: 4px;
+	width: 120px;
+	
+}
+/*每个皮肤切换框的具体参数设置，包括大小等*/
+#skin li{
+	margin-right: 4px;
+	width: 15px;
+	height: 15px;
+	overflow: hidden;
+	display: block;
+	cursor: pointer;
+	float: left;
+	text-indent: -9999px;
+	background-image: url(../images/theme.gif);
+}
+/*每个皮肤切换框的底图设置*/
+#skin_0{background-position: 0px 0px;}
+#skin_1{background-position: 15px 0px;}
+#skin_2{background-position: 35px 0px;}
+#skin_3{background-position: 55px 0px;}
+#skin_4{background-position: 75px 0px;}
+#skin_5{background-position: 95px 0px;}
+#skin_0.selected{background-position: 0px 15px;}
+#skin_1.selected{background-position: 15px 15px;}
+#skin_2.selected{background-position: 35px 15px;}
+#skin_3.selected{background-position: 55px 15px;}
+#skin_4.selected{background-position: 75px 15px;}
+#skin_5.selected{background-position: 95px 15px;}
+
+/*导航菜单栏 位置大小*/
+.mainNav{
+	position: absolute;
+	top: 68px;
+	left: 0px;
+	height: 37px;
+	line-height: 37px;
+	width: 990px;
+	z-index: 100;
+	background-color: #4A4A4A ;
+}
+/*菜单的位置右移,这里不用text-indent是因为每个菜单都是一行，这样就成了每行都缩进*/
+.mainNav .nav{
+	display: inline;
+	float: left;
+	margin-left: 25px;
+}
+/*每个li菜单的位置*/
+.mainNav ul li{
+	float: left;
+	display: inline;
+	margin-right: 14px;
+	position: relative;
+	z-index: 100;
+}
+/*设置一级菜单的样式*/
+.mainNav ul li a{
+	display: block;
+	padding: 0 8px;
+	font-weight: 700;
+	color: #fff;
+	font-size: 14px;
+}
+
+.mainNav ul li a:hover { 
+	background:none; 
+}
+/*设置二级菜单的位置大小*/
+.jnNav{
+	background: #fff;
+	border:1px solid #b1b1b1;
+	border-top: 0;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 37px;
+	width: 480px;
+	z-index: 1000;
+	display: none;
+}
+/*设置二级菜单的内容的位置大小，高度为自适应*/
+.jnNav .subitem{
+	float: left;
+	height: auto !important;
+	min-height: 100px;
+	padding: 10px 12px;
+	width: 450px;
+}
+/*设置二级菜单的的断点分割线*/
+.jnNav .subitem dl{
+	border-top: 1px dashed #c4c4c4;
+	overflow: hidden;
+	padding: 10px 0;
+	float: left;
+}
+/*设置二级菜单的中的dt部分的位置大小*/
+.jnNav .subitem dt{
+	float: left;
+	font-weight: bold;
+	line-height: 16px;
+	padding: 4px 3px;
+	text-align: center;
+	width: 76px;
+}
+/*设置二级菜单的中的dt部分的文本样式*/
+.jnNav .subitem dt a {
+    color: #000;
+    font-weight: 700;
+	font-size:12px;
+	padding:0;
+}
+/*设置二级菜单的中的dd部分的位置大小*/
+.jnNav .subitem dd{
+	float: left;
+	overflow: hidden;
+	padding: 0;
+	width: 364px;
+}
+/*设置二级菜单的中的dd部分，文本的位置大小*/
+.jnNav .subitem dd em {
+    border-right: 1px solid #CCCCCC;
+    float: left;
+    font-style: normal;
+    height: 14px;
+    line-height: 14px;
+    margin: 5px 0;
+    padding: 0 8px;
+}
+/*设置二级菜单的中的dd部分，文本的样式*/
+.jnNav .subitem dd em a {
+    color: #666666;
+    white-space: nowrap;
+	font-size:12px;
+	font-weight:normal;
+	padding:0;
+}
+
+/* 主体部分的位置大小 */
+#content{
+    clear: left;
+    margin: 0 auto;
+    position: relative;
+    width: 991px;
+	height: 560px;
+    overflow: hidden;
+    padding: 10px 0;
+}
+/* 商品分类部分的位置大小 */
+#jnCatalog{
+	float: left;
+	height: 560px;
+	margin: 0 11px 0 0;
+	overflow: hidden;
+	width: 187px;
+	border: 1px solid #ccc;
+}
+/* "商品分类"的样式 */
+#jnCatalog h2{
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	font-size: 12px;
+	text-indent: 13px;
+	background-color: #6e6e6e;
+}
+/* 商品分类的内容的位置大小等 */
+.jnCatainfo{
+	border: 1px solid #6e6e6e;
+	border-style: none solid solid;
+	height: 524px;
+	overflow: hidden;
+	padding: 5px 10px 0;
+	width: 165px;
+}
+/* 商品分类的分栏题目的样式，如下划线等 */
+.jnCatainfo h3{
+	border-bottom: 1px solid #eeeeee;
+	height: 24px;
+	line-height: 24px;
+	width: 164px;
+}
+/* 商品分类的分栏内容 ul 的位置大小 */
+.jnCatainfo ul{
+	float: left;
+	padding: 0 2px 8px;
+}
+/* 商品分类的分栏内容 li 的位置大小 */
+.jnCatainfo li{
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	width: 78px;
+	overflow: left;
+	position: relative;
+}
+/* 商品分类的分栏内容 a 的字体颜色 */
+.jnCatainfo li a {
+	color: #444444;
+}
+/*鼠标浮文字在上面的效果*/
+.jnCatainfo li a:hover{
+	color: #008cd7;
+	text-decoration: none;
+}
+/*高亮效果*/
+.jnCatainfo li a.promoted{
+	color:red;
+}
+/*“hot”效果*/
+.jnCatainfo li .hot{
+    background: url("../images/hot.gif") no-repeat scroll 0 0 transparent;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    width: 21px;
+}
+
+/*大屏广告的位置与大小*/
+#jnImageroll{
+	float: left;
+	height: 320px;
+	margin: 0 11px 0 0;
+	overflow: hidden;
+	position: relative;
+	width: 550px;
+}
+/*大屏广告五张图片重叠到一个位置*/
+#jnImageroll img {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+/*把大屏广告的 div 部分放到下部*/
+#jnImageroll div{
+	bottom: 0;
+	overflow: hidden;
+	position: absolute;
+	float: left;
+}
+/*大屏广告下方的 div 部分样式设置*/
+#jnImageroll div a{
+	background-color: #444444;
+	display: inline-block;
+	float: left;
+	height: 32px;
+	margin-right: 1px;
+	overflow: hidden;
+	padding: 5px 15px;
+	width: 79px;
+	text-align: center;
+	opacity: 0.7;
+}
+
+/*大屏广告下方的 em 部分即文字部分的样式设置*/
+#jnImageroll div a em{
+	color: white;
+	cursor: pointer;
+	display: block;
+	height: 16px;
+	overflow: hidden;
+	width: 79px;
+}
+/*鼠标浮动在上方的变化*/
+#jnImageroll div a:hover{
+	background: url("../images/adindex.gif") no-repeat center 39px #37A7D7;
+	background-color:#4DBBDC;
+	opacity: 1;
+	text-decoration: none;
+}
+/*把最后一个的宽由79px改为80px，来补足mairgin-right的1px*/
+#jnImageroll a.last{
+	margin: 0;
+	width: 80px;
+}
+
+
+/* 最新动态和秒杀 部分的位置与大小*/
+#jnNotice{
+	float: left;
+	height: 321px;
+	overflow: hidden;
+	width: 230px;
+} 
+/* 秒杀 部分的位置与大小*/
+#jnMiaosha {
+	float: left;
+	height: 175px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	width: 230px;
+}
+/* 秒杀 部分的css3动画效果及浏览器兼容*/
+.rotate img {
+	-webkit-transition:1s all;
+	-moz-transition:1s all;
+	-o-transition:1s all;
+	transition:1s all;
+}
+.rotate:hover img {
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg);
+	-o-transform:rotate(360deg);
+	transform:rotate(360deg);
+}
+/* 最新动态 部分的位置与大小*/
+#jnNoticeInfo {
+	float: left;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	width: 228px;
+	height: 133px;
+}
+/* h2 部分的样式设置*/
+#jnNoticeInfo h2{
+	height: 23px;
+	line-height: 23px;
+	border-bottom: 1px solid #dfdfdf;
+	text-indent: 12px;
+	color: #111;
+}
+/* 最新动态ul li部分的位置和大小*/
+#jnNoticeInfo ul{
+	float: left;
+	padding: 6px 2px 0 12px;
+}
+
+#jnNoticeInfo li{
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+}
+/* 最新动态 a 中的文字的样式*/
+#jnNoticeInfo li a{
+	color: #666;
+}
+/* 鼠标放在最新动态 a 中的文字上的样式变化*/
+#jnNoticeInfo li a:hover{
+	color: #008cd7;
+	text-decoration: none;
+}
+
+/* 品牌活动 */
+/* 品牌活动部分的位置和大小 */
+#jnBrand{
+	float: left;
+	height: 230px;
+	margin: 10px 0 0;
+	overflow: hidden;
+	width: 790px;
+}
+/* 品牌活动 上半部分 品牌分类 的位置和大小 */
+#jnBrandTab{
+	border-bottom:1px solid #e4e4e4;
+	height: 29px;
+	position: relative;
+	width: 790px;
+	float: left;
+}
+/* 品牌活动 上半部分 左侧“品牌活动” 的位置大小 */
+#jnBrandTab h2{
+	height: 29px;
+	line-height: 29px;
+	left: 0;
+	position: absolute;
+	width: 100px;
+}
+/* 品牌活动 上半部分 右侧活动分类 的位置大小 */
+#jnBrandTab ul{
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+#jnBrandTab li{
+	float: left;
+	margin: 0 10px 0 0;
+}
+/* 品牌活动 上半部分 右侧活动分类 的字体样式 */
+#jnBrandTab li a {
+	background-color: #e4e4e4;
+	color: #000;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px;
+}
+/* 鼠标放在 右侧活动分类 的文字上的样式变化,两个分开的原因是，background会冲突*/
+#jnBrandTab a:hover{
+	background-color: #fa5889;
+	color: #fff;
+	outline: 0 none;		
+}
+#jnBrandTab li:hover{
+	background:url(../images/chos.gif) no-repeat scroll 50% bottom transparent;
+	padding-bottom: 3px;
+}
+
+/* 品牌活动 下半部分 品牌活动内容 的位置大小 */
+#jnBrandContent{
+	float: left;
+	height: 188px;
+	overflow: hidden;
+	margin: 8px 5px;
+	width: 790px;
+	position: relative;
+}
+/* 品牌活动 下半部分 加载的品牌内容长度*/
+#jnBrandList{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 3200px;
+}
+/* 品牌活动 下半部分 单个 li单元 的位置大小，都在 jnBrandList 里顺序排列*/
+#jnBrandContent li{
+	float: left;
+	height: 188px;
+	overflow: hidden;
+	padding: 0 5px;
+	position: relative;
+	width: 185px;
+}
+/* 品牌活动 下半部分 li 中图片的位置*/
+#jnBrandContent li img{
+	left: 5px;
+	position: absolute;
+	top: 0;
+}
+/* 品牌活动 下半部分 li 中 span 底部图片介绍的位置和大小*/
+#jnBrandContent li span{
+	background-color: #efefef;
+	bottom: 0;
+	display: block;
+	font-size: 14px;
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	position: absolute;
+	text-align: center;
+	width: 183px;
+}
+/* 品牌活动 下半部分 li 中 span 底部图片介绍的文字颜色*/
+#jnBrandContent span a{
+	color: #666;
+}
+/* 鼠标浮动时 底部图片介绍的文字颜色变化*/
+#jnBrandContent li a:hover{
+	color: #008cd7;
+	text-decoration: none;
+}
+
+/* 详细页的样式*/
+
+/* 产品大图缩略图的位置和大小*/
+#jnProitem{
+	float: left;
+	width: 312px;
+	height: 560px;
+	display: inline;
+}
+/* 产品大图样式*/
+#jnProitem .jqzoomWrap{
+	border: 1px solid #ccc;
+	cursor: pointer;
+	float: left;
+	padding: 0;
+	position: relative;
+}
+/* 产品大图样式*/
+#jnProitem span{
+	clear: both;
+	display: block;
+	padding: 10px 0;
+	text-align: center;
+	width: 320px;
+}
+
+/* 产品缩略图样式*/
+
+/* 产品缩略图位置和大小*/
+#jnProitem ul.imgList{
+	height: 80px;
+}
+#jnProitem ul.imgList li{
+	float: left;
+	margin-right: 10px;
+}
+/* 产品缩略图的样式*/
+#jnProitem ul.imgList li img{
+	width: 60px;
+	height: 60px;
+	padding: 1px;
+	background: #eee;
+	cursor: pointer;
+}
+/* 鼠标在产品缩略图上浮动的效果，即增加1px的灰色背景,不用border是因为会造成图片微动*/
+#jnProitem ul.imgList li img:hover { 
+	padding:1px; 
+	background:#999; 
+}
+/* 选项卡的位置和大小*/
+.tab{
+	clear: both;
+	float: left;
+	height: 230px;
+	overflow: hidden;
+	width: 310px;
+}
+/* 选项卡的位置,大小和样式*/
+.tab .tab_menu{
+	clear: both;
+}
+.tab .tab_menu li{
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	list-style: none;
+	padding: 1px 6px;
+	margin-right: 4px;
+	background: #f1f1f1;
+	border: 1px solid #898989;
+	border-bottom: none;
+}
+/* 鼠标在选项卡浮动和点击时样式*/
+.tab .tab_menu li:hover{
+	background: #dfdfdf;
+}
+
+.tab .tab_menu li.selected{
+	color: #fff;
+	background: #6d84b4;
+}
+
+/* 选项卡内容位置,大小*/
+.tab .tab_box{
+	clear: both;
+	border: 1px solid #898989;
+}
+/* 选项卡内容隐藏*/
+.tab .hide{
+	display: none;
+}
+
+/* 颜色、尺寸和评分的位置和大小*/
+#jnDetails{
+	float: left;
+	display: inline;
+	overflow: hidden;
+	width: 468px;
+}
+#jnDetails .jnProDetail{
+	padding: 0 10px 10px 10px;
+}
+/* 文字介绍 颜色，尺寸和评分的位置和大小*/
+#jnDetails .jnProDetail li{
+	line-height: 25px;
+	float: left;
+	width: 100%;
+}
+/* 价格 的样式*/
+#jnDetails .jnProDetailList strong.del{
+	color: #404040;
+	font-size: 12px;
+	position: static;
+	text-decoration: line-through;
+} 
+/* 所有 strong 的内容 的样式，即取消文字加粗*/
+#jnDetails .jnProDetailList strong{
+	font-weight: 400;
+}
+
+/* 促销 的样式*/
+#jnDetails .jnProDetailList .tbDetailPrice strong{
+	font-weight: 700;
+	color: #ff5500;
+	font:24px Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+	padding-right: 5px;
+	vertical-align: middle;
+}
+/* 颜色 的样式*/
+#jnDetails .jnProDetailList .color_change li, #jnDetails .jnProDetailList .pro_size li{
+	float: left;
+	margin-right: 10px;
+	width: 40px;
+}
+/* 三种颜色的 的样式*/
+#jnDetails .jnProDetailList .color_change img{
+	width: 30px;
+	height: 30px;
+	padding: 1px;
+	background: #eee;
+	border: 1px solid #bbb;
+	cursor: pointer;
+}
+/* 鼠标在三种颜色上浮动时 的颜色的变化*/
+#jnDetails .jnProDetailList .color_change img:hover{
+	border: 1px solid #f60;
+}
+/* 四种尺寸的 的样式,注意此处的line-height的重要性*/
+#jnDetails .jnProDetailList  .pro_size li{
+	display: block;
+	margin-right: 6px;
+	border: 1px solid #aaa;
+	cursor: pointer;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+}
+/* 四种尺寸的被选中的样式，为后面的jq操作做准备*/
+#jnDetails .jnProDetailList  .pro_size li.cur{
+	border: 1px solid #aaa;
+	background-color: #f60;
+}
+
+/* 评分系统的位置及样式*/
+/* 评分系统贴图*/
+.rating{
+	overflow: hidden;
+	width: 80px;
+	height: 16px;
+	margin-bottom: 20px;
+	clear: both;
+	position: relative;
+	background: url(../images/star-matrix.gif)no-repeat 0 0;
+}
+/* 评分系统不同星级由背景贴图移动实现*/
+.nostat{background-position: 0 0}
+.onestat{background-position: 0 -16px}
+.twostat{background-position: 0 -32px}
+.threestat{background-position: 0 -48px}
+.fourstat{background-position: 0 -64px}
+.fivestat{background-position: 0 -80px}
+/* 评分系统中把数字移走*/
+ul.rating li{
+	cursor: pointer;
+	float: left;
+	text-indent: -999em;
+}
+/* 评分系统中把数字移走*/
+ul.rating li a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 16px;
+	height: 16px;
+	text-decoration: none;
+	z-index: 200;
+}
+
+ul.rating li.one a{left: 0;}
+ul.rating li.two a{left: 16px;}
+ul.rating li.three a{left: 32px;}
+ul.rating li.four a{left: 48px;}
+ul.rating li.five a{left: 64px;}
+
+ul.rating li a:hover{
+	z-index: 2;
+	width: 80px;
+	height: 16px;
+	overflow: hidden;
+	left: 0;
+	background: url(../images/star-matrix.gif) no-repeat 0 0;
+}
+ul.rating li.one a:hover{background-position: 0 -96px;}
+ul.rating li.two a:hover{background-position: 0 -112px;}
+ul.rating li.three a:hover{background-position: 0 -128px;}
+ul.rating li.four a:hover{background-position: 0 -144px;}
+ul.rating li.five a:hover{background-position: 0 -160px;}
+
+/* 弹出框*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
